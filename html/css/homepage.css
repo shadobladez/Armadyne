@@ -1,0 +1,34 @@
+    body {
+        width: 100%;
+    }
+
+    .sbd_slider {
+        height: 300px;
+        border: 1px solid black;
+    }
+
+    .sbd-vezka-group {
+        height: 200px;
+        border: 1px solid black;
+    }
+
+    .sbd-vezka {
+        height: 100%;
+        width: 25%;
+        border: 1px solid black;
+        float: left;
+    }
+
+    .sbd-secondary-retail-group {
+        height: 200px;
+        border: 1px solid black;
+    }
+
+    .sbd-retail {
+        border: 1px solid black;
+        float: left;
+    }
+
+    .sbd-clear {
+        clear: both;
+    }

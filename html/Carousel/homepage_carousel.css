@@ -1,0 +1,9 @@
+.carousel-inner {
+	max-height: 290px;
+}
+
+.product img {
+	height: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}

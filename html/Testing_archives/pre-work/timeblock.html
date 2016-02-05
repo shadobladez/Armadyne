@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../lib/jquery-2.1.4.js"></script>
+
+</head>
+<body>
+<div class="timeblock clearfix">
+    <div class="container">
+        <div class="timer clearfix">
+            <ul id="countdown">
+                <li>
+                    <span class="days"></span>
+                    <p class="timeRefDays">days</p>
+                </li>
+                <li class="seperator">.</li>
+                <li>
+                    <span class="hours"></span>
+                    <p class="timeRefHours">hours</p>
+                </li>
+                <li class="seperator">:</li>
+                <li>
+                    <span class="minutes"></span>
+                    <p class="timeRefMinutes">minutes</p>
+                </li>
+                <li class="seperator">:</li>
+                <li>
+                    <span class="seconds"></span>
+                    <p class="timeRefSeconds">seconds</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    $(function() {
+        function sbd_countdown(the_days, the_hours, the_minutes, the_seconds, the_callback){
+
+            var days = the_days;
+            var hours = the_hours;
+            var minutes = the_minutes;
+            var seconds = the_seconds;
+
+            var mytime = setInterval(displaytime, 1000);
+
+            function displaytime() {
+
+                seconds -= 1;
+                if  (seconds < 0) {
+                    seconds = 59;
+                    minutes -= 1;
+                    if  (minutes < 0) {
+                        minutes = 59;
+                        hours -= 1;
+                        if  (hours < 0) {
+                            hours = 23;
+                            days -= 1;
+                        }
+                    }
+                }
+
+                $('.days').html(days);
+                $('.hours').html(hours);
+                $('.minutes').html(minutes);
+                $('.seconds').html(seconds);
+
+                if (seconds == 0 && minutes == 0 && hours == 0 && days == 0) {
+                    clearInterval(mytime);
+                    the_callback();
+                }
+            }
+        }
+        function completion (){
+            alert('complete');
+        }
+        sbd_countdown (0, 0, 0, 3, completion);
+
+    });
+</script>
+</body>
+</html>

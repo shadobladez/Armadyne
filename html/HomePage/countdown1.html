@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Armadyne</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel='stylesheet' href="../css/countdown.css">
+    <link rel='stylesheet' href="../css/timer.css">
+    <script src="../lib/jquery-2.1.4.js"></script>
+</head>
+<body>
+<div>
+    <div class="sbd-header">
+        <a href="countdown1.html">
+            <img class="sbd-logo" src="../img/armadyne.png">
+        </a>
+        <div> A New Prospective</div>
+        <div> A Proven Platform</div>
+        <div> Become a Part</div>
+    </div>
+
+    <div class="sbd-countdown">
+        <div class="sbd-site-name"></div>
+        <div class="timeblock clearfix">
+            <div class="sbd-time-container">
+                <div class="timer clearfix">
+                    <div id="sbd-countdown">
+                        <div class="sbd-days">
+                            <div class="days" style="display:none;"></div>
+                            <canvas id="dayCanvas" width="288" height="150"></canvas>
+                            <div class="sbd-timeRefDays">Days</div>
+                        </div>
+                        <div class="sbd-hours">
+                            <div class="hours" style="display: none;"></div>
+                            <canvas id="hourCanvas" width="288" height="150"></canvas>
+                            <div class="sbd-timeRefHours">Hours</div>
+                        </div>
+                        <div class="sbd-minutes">
+                           <div class="minutes" style="display: none;"></div>
+                            <canvas id="minuteCanvas" width="288" height="150"></canvas>
+                            <div class="sbd-timeRefMinutes">Minutes</div>
+                        </div>
+                        <div class=sbd-seconds>
+                            <div class="seconds" style="display:none;"></div>
+                            <canvas id="secondCanvas" width="288" height="150"></canvas>
+                            <div class="sbd-timeRefSeconds">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sbd-subscription">
+        <div class="sbd-row">
+            <div class="sbd-text">Interested In A Starter Drone?</div>
+            <a href="../Products/productListing.html">
+                <button type="button" class="btn btn-danger">Get Started!</button>
+            </a>
+        </div>
+    </div>
+
+    <!--
+    <div class="sbd-subscription">
+        <div class="sbd-row">
+            <div class="sbd-advs">Image</div>
+            <input id="sbd_your_email" class="sbd-your-email" input type="text" value="Your Email">
+            <button type="button" class="btn btn-danger">Subscribe</button>
+        </div>
+    </div>
+    -->
+
+    <div class="sbd-contact">
+        <img src="../img/icons/transparent/facebook.png">
+        <img src="../img/icons/transparent/google_plus.png">
+        <img src="../img/icons/transparent/instagram.png">
+        <img src="../img/icons/transparent/linked_in.png">
+        <img src="../img/icons/transparent/pinterest.png">
+        <img src="../img/icons/transparent/tumblr.png">
+        <img src="../img/icons/transparent/twitter.png">
+        <img src="../img/icons/transparent/youtube.png">
+        <div class="sbd-clear"></div>
+    </div>
+
+    <div class="footer">Copyright 2015 Armadyne</div>
+
+</div>
+
+<script>
+    function drawArc (theCanvas, value, total) {
+
+        var v = value;
+        var t = total;
+        var s = (v/t)*2;
+
+//      var canvas = document.getElementById('myCanvas');
+        var canvas = document.getElementById(theCanvas);
+        var context = canvas.getContext('2d');
+        var x = canvas.width / 2;
+        var y = canvas.height / 2;
+        var radius = 65;
+        var startAngle = (s-0.5) * Math.PI;
+        var endAngle = (2.0-0.5) * Math.PI;
+        var counterClockwise = false;
+
+        // clear the whole canvas
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        context.beginPath();
+        context.arc(x, y, radius, -0.5 * Math.PI, endAngle, counterClockwise);
+        context.lineWidth = 20;
+
+        // line color
+        context.strokeStyle = 'black';
+        context.stroke()
+
+        context.beginPath();
+        context.arc(x, y, radius, startAngle, endAngle, counterClockwise);
+        context.lineWidth = 7;
+
+        // line color
+        context.strokeStyle = 'white';
+        context.stroke()
+
+        // text
+        context.font = '40px serif';
+        context.textAlign = "center";
+        context.fillStyle = "white";
+        context.fillText(v,x, y+13);
+
+    }
+    $(function() {
+        function completion() {
+
+            /* upon completion an alert pop-up box will appear
+             alert('complete');
+             */
+
+        }
+
+        sbd_countDown(77, 0, 0, 3, completion);
+    });
+</script>
+<!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+<script src="../js/sbd_utils.js"></script>
+
+<!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+<script src="/js/bootstrap3.3.5.min.js"></script>
+
+</body>
+</html>

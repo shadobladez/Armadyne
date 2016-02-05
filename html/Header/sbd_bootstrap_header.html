@@ -1,0 +1,84 @@
+<html>
+<head>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../css/sbd_header.css">
+    <script src="../lib/jquery-2.1.4.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="sbd_armadyne_logo navbar-brand" href="#">Armadyne Logo</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="sbd_products dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Products
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="sbd_product_list dropdown-menu"></ul>
+                    </li>
+                    <li class="sbd_services dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Services
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                        </ul>
+                    </li>
+                    <li class="sbd_store"><a href="#"> Store </a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="sbd_login"><a href="#"> Login </a></li>
+                    <li class="sbd_sign_up"><a href="#"> Sign-up </a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script>
+        var getProducts = function(callback) {
+            var products;
+            if (products === undefined) {
+                $.getJSON('../json/products.json', function (data) {
+                    products = data;
+                    callback(products);
+                });
+            }else{
+                callback(products);
+            }
+        };
+
+        getProducts(function(productList) {
+            console.log(productList);
+            var previousGroup = "";
+            var products = productList.map(function(item) {
+                var myHtml = "";
+                if (item.product_group !== previousGroup) {
+                    previousGroup = item.product_group;
+                    myHtml += '<li role="separator" class="divider">' + '</li>';
+                }
+                myHtml += '<li>' + '<a href="#">' + item.product_name + '</a>' +'</li>';
+                return myHtml;
+            });
+            $('.sbd_product_list').html(products.join(""));
+        });
+    </script>
+
+</body>
+</html>

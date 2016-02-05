@@ -1,0 +1,125 @@
+/*
+div {
+	border: 1px black solid;
+}
+*/
+
+.sbd_wrapper {
+	border: 1px black solid;
+}
+
+.sbd_row {
+	border: 1px red solid
+}
+
+.sbd_header {
+	border: 1px green solid;
+}
+
+.sbd_armadyne_logo {
+	border: 1px purple solid;
+}
+
+.sbd_products {
+	border: 1px red solid;
+}
+
+.sbd_services {
+	border: 1px orange solid;
+}
+
+.sbd_store {
+	border: 1px yellow solid;
+}
+
+.sbd_breadcrumbs {
+	border: 1px cyan solid;
+}
+
+.sbd_main_body {
+	border: 1px blue solid;
+}
+
+.sbd_pictures {
+	border: 1px brown solid;
+}
+
+.sbd_main_photo {
+	width: 100%;
+	margin: 0 auto;
+	border: 1px grey solid;
+}
+
+.sbd_main_photo img {
+	width: 100%;
+}
+
+.sbd_photo_selector {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.sbd_carousel {
+	border: 1px crimson solid;
+}
+
+.sbd_carousel img {
+	width: 20%;
+}
+
+.sbd_description {
+	height: 100%;
+	border: 1px cadetblue solid;
+}
+
+.sbd_product_name {
+	text-align: center;
+}
+
+.sbd_product_price {
+	text-align: center;
+}
+
+.sbd_features {
+	border: 1px steelblue solid;
+}
+
+.sbd_order {
+	border: 1px blue solid;
+}
+
+.sbd_shipping_time {
+	border: 1px green solid;
+}
+
+.sbd_accessories {
+	border: 1px coral solid;
+}
+
+.sbd_tabs {
+	border: 1px dimgrey solid;
+}
+
+.sbd_information {
+	border: 1px darkgreen solid;
+}
+
+.sbd_recommended {
+	border: 1px deeppink solid;
+}
+
+.sbd_footer {
+	border: 1px forestgreen solid;
+}
+.clearfix {
+	*zoom: 1;
+}
+
+.clearfix:before,.clearfix:after{
+	display: table;
+	content: "";
+	line-height: 0;
+}
+.clearfix:after{
+	clear: both;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <script src="../lib/jquery-2.1.4.js"></script>
+</head>
+<body>
+
+    <ul class="sbd_tabs nav nav-tabs col-sm-12">
+        <li class="col-sm-3"><a href="#sbd_overview" class="active"><div class="sbd_overview"> Overview </div></a></li>
+        <li class="col-sm-3"><a href="#sbd_tech_specs"><div class="sbd_tech_specs"> Tech Specs </div></a></li>
+        <li class="col-sm-3"><a href="#sbd_in_the_box"><div class="sbd_in_the_box"> In The Box </div></a></li>
+        <li class="col-sm-3"><a href="#sbd_faq"><div class="sbd_faq"> FAQ </div></a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="sbd_overview" class="tab-pane fade in active">
+            <h3>HOME</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div id="sbd_tech_specs" class="tab-pane fade">
+            <h3>Menu 1</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div id="sbd_in_the_box" class="tab-pane fade">
+            <h3>Menu 2</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        </div>
+        <div id="sbd_faq" class="tab-pane fade">
+            <h3>Menu 3</h3>
+            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+    </div>
+
+
+<script>
+
+    $('.sbd_tabs a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show')
+    })
+
+</script>
+
+<script src="../js/bootstrap.js"></script>
+
+</body>
+</html>

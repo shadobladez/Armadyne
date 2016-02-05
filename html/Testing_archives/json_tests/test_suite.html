@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/productListing.css">
+    <link rel='stylesheet' href="../../css/sbd_header.css">
+    <link rel="stylesheet" href="../../css/sbd_footer.css">
+    <script src="../../lib/jquery-2.1.4.js"></script>
+
+</head>
+<body>
+
+<script>
+
+    var products =
+            [    {"id": "001", "name": "L6039"  , "price": 50.00, "inventory": 10,  "min_stock": 5, "quantity_order": 10, "main_img": "P1030634", "cost" : 20.00}
+                ,{"id": "002", "name": "L6039W" , "price": 90.00, "inventory": 1,   "min_stock": 5, "quantity_order": 10, "main_img": "P1030646", "cost" : 25.00}
+                ,{"id": "003", "name": "L6052"  , "price": 50.00, "inventory": 21,  "min_stock": 5, "quantity_order": 10, "main_img": "P1030598", "cost" : 20.00}
+                ,{"id": "004", "name": "L6052W" , "price": 90.00, "inventory": 3,   "min_stock": 5, "quantity_order": 10, "main_img": "P1030480", "cost" : 25.00}
+            ];
+
+    var price = products.reduce(function(accumulator,product){
+
+        return accumulator + (product.inventory * product.price);
+
+    }, 0);
+
+    function inventoryStock (element) {}
+    products.forEach(inventoryStock);
+
+    console.log(price);
+
+    function stock(element) {
+        if(element.inventory < element.min_stock){
+            return  element.quantity_order - element.inventory
+        }
+    }
+
+    var stock_needed = products.filter(function (product) {
+        return product.inventory < product.min_stock;
+    }).map(function (product){
+        return product.name + ': ' + product.quantity_order;
+    });
+
+    console.log(stock_needed);
+
+    var priceRequired = products.filter(function (product) {
+        return product.inventory < product.min_stock;
+    }).reduce (function (accumulator, product){
+        return accumulator + (product.quantity_order * product.cost)
+    }, 0);
+
+    console.log('Money required to completely restock: ' + '$' + priceRequired + '.00');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css">
+    <script src="../../lib/jquery-2.1.4.js"></script>
+</head>
+<body>
+
+<button type="button" class="btn btn-default" data-toggle="modal" data-target=".sbd_delivery_details"> Delivery Details </button>
+<div class="modal fade sbd_delivery_details" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true"> ×</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title"> 3) Delivery Details </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="sbd_first_name"> First Name: </label>
+                    <input type="text" class="form-control" id="sbd_first_name" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <label for="sbd_last_name"> Last Name: </label>
+                    <input type="text" class="form-control" id="sbd_last_name" placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="sbd_street"> Street </label>
+                    <input type="text" class="form-control" id="sbd_street" placeholder="Street Line 1">
+                    <input type="text" class="form-control" id="sbd_street_optional" placeholder="Street Line 2 (Optional)">
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Country/Region:  <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        ...
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <label for="sbd_city"> City: </label>
+                    <input type="text" class="form-control" id="sbd_city" placeholder="City">
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sate/Province:  <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        ...
+                    </ul>
+                </div>
+                <div class="form-group">
+                    <label for="sbd_zip"> Zip/Postal Code: </label>
+                    <input type="text" class="form-control" id="sbd_zip" placeholder="#####">
+                </div>
+                <div class="form-group">
+                    <label for="sbd_phone_number"> Phone Number: </label>
+                    <input type="text" class="form-control" id="sbd_phone_number" placeholder="###-###-####">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/bootstrap.js"></script>
+
+</body>
+</html>

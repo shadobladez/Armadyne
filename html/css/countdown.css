@@ -1,0 +1,107 @@
+    body {
+        width:99%;
+    }
+    .sbd-header{
+        top: 0;
+        min-height: 70px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .sbd-logo {
+        height: 150px;
+        margin: 5px;
+    }
+
+    .sbd-site-name {
+        font-family: 'Montserrat', 'sans-serif';
+        text-align: center;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 55px;
+    }
+
+    .sbd-subscription {
+        text-align: center;
+        background-color: #808080;
+        border: 1px solid black;
+        height: 100px;
+    }
+
+    .sbd-advs{
+    }
+
+    .btn-danger {
+        background-color: grey;
+        border-color: black;
+    }
+
+    .sbd-row{
+        text-align: center;
+        float:left;
+        width: 100%;
+        height: 100%;
+        padding-top: 1%;
+    }
+    
+    .sbd-text{
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .sbd-input{
+        float: left;
+        width: 50%;
+        margin: auto;
+    }
+
+    .sbd-input input {
+        width: 90%;
+        height: 40px;
+    }
+
+    .btn {
+        height: 35px;
+        width: 130px;
+    }
+
+    .sbd-contact {
+        padding: 10px 10px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .sbd-red-pin {
+        height: 50px;
+        width: 30px;
+    }
+
+    .sbd-address {
+    }
+
+    .sbd-email-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .sbd-email {
+    }
+
+    .sbd-contact img {
+        display: inline;
+        width: 5%;
+        /*
+        min-height: 150px;
+        min-width: 150px;
+        */
+        max-height: 150px;
+        max-width: 150px;
+    }
+
+    .sbd-clear {
+        clear: both;
+    }
+
+    .sbd_footer {
+        background-color: #CA0F0F;
+    }

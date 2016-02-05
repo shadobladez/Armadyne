@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Armadyne</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel='stylesheet' href="../css/countdown.css">
+    <link rel="stylesheet" href="../css/flipclock.css">
+
+    <script src="../lib/jquery-2.1.4.js"></script>
+
+</head>
+<body>
+<div>
+    <div class="sbd-header">
+            <a href="countdown.html"><img class="sbd-logo" src="/img/Armadyne-Main-Logo2-Transparent.png"></a>
+    </div>
+
+    <div class="sbd-countdown">
+        <div class="sbd-site-name">
+            ARMADYNE
+        </div>
+        <div class="sbd-clock">
+            <div class="clock"  style="margin:2em;"></div>
+        </div>
+    </div>
+
+    <div class="sbd-subscription">
+        <div class="sbd-title">
+            Interested?<br>Subscribe Now to Our News Letter
+        </div>
+        <div class="sbd-row">
+            <div class="sbd-input">
+                <input id="sbd_your_name" class="sbd-your-name" input type="text" value="Your Name">
+            </div>
+            <div class="sbd-input">
+                <input id="sbd_your_email" class="sbd-your-email" input type="text" value="Your Email">
+            </div>
+        </div>
+        <div class="sbd-subscribe-btn">
+            <button type="button" class="btn btn-danger">Subscribe</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="sbd-contact">
+            <div style="float: left; width: 33%">
+                <img class="sbd-red-pin" src="/img/icons/red-pin.png">
+                <div class="sbd-address"> Company Address</div>
+            </div>
+            <div style="float: left; width: 33%;">
+                <img class="sbd-email-icon" src="../img/icons/email.png">
+                <div class="sbd-email"> Email Information</div>
+            </div>
+            <div class="sbd-ads" style="width:33%;">
+                <img src="/img/glyphicons/social/png/facebook.png">
+                <img src="/img/glyphicons/social/png/twitter.png">
+                <img src="/img/glyphicons/social/png/instagram.png">
+                <img src="/img/glyphicons/social/png/pinterest.png">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var clock;
+    $(function(){
+
+        // Grab the current date
+        var currentDate = new Date();
+
+        // Set some date in the future. In this case, it's always Jan 1
+        var futureDate  = new Date(currentDate.getFullYear() + 1, 0, 1);
+
+        // Calculate the difference in seconds between the future and current date
+        var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+        // Instantiate a countdown FlipClock
+
+        clock = $('.clock').FlipClock(diff, {
+            clockFace: 'DailyCounter',
+            countdown: true
+        });
+    });
+</script>
+
+<!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+<script src="../js/flipclock.js"></script>
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>

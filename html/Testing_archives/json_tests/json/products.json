@@ -1,0 +1,11 @@
+var products = {
+
+"table": "products"
+,"data": [
+	{"id": "001", "name": "L6039", 	"creator": "", "price": 50.00, "inventory": "", "main_img": ""}
+,	{"id": "001", "name": "L6039W", "creator": "", "price": 90.00, "inventory": "", "main_img": ""}
+,	{"id": "001", "name": "L6052", 	"creator": "", "price": 50.00, "inventory": "", "main_img": ""}
+,	{"id": "001", "name": "L6052W", "creator": "", "price": 90.00, "inventory": "", "main_img": ""}
+]
+
+}

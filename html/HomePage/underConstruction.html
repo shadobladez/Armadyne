@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Armadyne</title>
+    <script src="../lib/jquery-2.1.4.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <link rel='stylesheet' href="../css/countdown.css">
+    <link rel='stylesheet' href="../css/timer.css">
+    <link rel="stylesheet" href="../css/sbd_footer.css">
+</head>
+<body>
+<div>
+    <div class="sbd-header">
+        <a href="underConstruction.html">
+            <img class="sbd-logo" src="../img/armadyne.png">
+        </a>
+        <div class="sbd-text"> Our Full Site Is Currently Under Construction!</div>
+        <div class="sbd-text"> If You Are Here to Buy a Drone, Click Here!</div>
+        <div>
+            <a href="../Products/productListing.html">
+                <button type="button" class="btn btn-danger">Enter Our Store!</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="sbd-countdown">
+        <div class="sbd-site-name"></div>
+        <div class="timeblock clearfix">
+            <div class="sbd-time-container">
+                <div class="timer clearfix">
+                    <div id="sbd-countdown">
+                        <div class="sbd-days">
+                            <div class="days" style="display:none;"></div>
+                            <canvas id="dayCanvas" width="288" height="150"></canvas>
+                            <div class="sbd-timeRefDays">Days</div>
+                        </div>
+                        <div class="sbd-hours">
+                            <div class="hours" style="display: none;"></div>
+                            <canvas id="hourCanvas" width="288" height="150"></canvas>
+                            <div class="sbd-timeRefHours">Hours</div>
+                        </div>
+                        <div class="sbd-minutes">
+                           <div class="minutes" style="display: none;"></div>
+                            <canvas id="minuteCanvas" width="288" height="150"></canvas>
+                            <div class="sbd-timeRefMinutes">Minutes</div>
+                        </div>
+                        <div class=sbd-seconds>
+                            <div class="seconds" style="display:none;"></div>
+                            <canvas id="secondCanvas" width="288" height="150"></canvas>
+                            <div class="sbd-timeRefSeconds">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sbd-subscription">
+        <div class="sbd-row">
+            <div class="sbd-text"> Until Completion! </div>
+        </div>
+    </div>
+
+    <div class="sbd-contact">
+        <img src="../img/icons/transparent/facebook.png">
+        <img src="../img/icons/transparent/google_plus.png">
+        <img src="../img/icons/transparent/instagram.png">
+        <img src="../img/icons/transparent/linked_in.png">
+        <img src="../img/icons/transparent/pinterest.png">
+        <img src="../img/icons/transparent/tumblr.png">
+        <img src="../img/icons/transparent/twitter.png">
+        <img src="../img/icons/transparent/youtube.png">
+        <div class="sbd-clear"></div>
+    </div>
+
+    <div class="sbd_footer"></div>
+
+    <div class="sbd_copyright">Copyright 2015 Armadyne</div>
+</div>
+
+<script>
+
+    $(function() {
+        var completion = function() {
+
+            /* upon completion an alert pop-up box will appear
+             alert('complete');
+             */
+
+        };
+
+        sbd_countDown(30, 0, 0, 0, completion);
+    });
+    $('.sbd_footer').load('../Footer/sbd_footer.html');
+
+</script>
+<!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+<script src="../js/sbd_utils.js"></script>
+
+<!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+<script src="../js/bootstrap.min.js"></script>
+
+</body>
+</html>

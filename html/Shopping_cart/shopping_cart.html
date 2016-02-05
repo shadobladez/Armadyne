@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../css/shopping_cart.css">
+    <script src="../lib/jquery-2.1.4.js"></script>
+</head>
+<body>
+
+    <div class="sbd_body_head">
+        <div class="sbd_title"> My Shopping Cart </div>
+        <div class="sbd_support"> Help & Support</div>
+    </div>
+    <div class="sbd_main_body">
+        <div class="sbd_shopping_cart_table" data-example-id="sbd_shopping_cart_table">
+            <table class="table">
+
+                <thead>
+
+                    <tr>
+                        <th> Item </th>
+                        <th> Description </th>
+                        <th> Item Price </th>
+                        <th> Quantity </th>
+                        <th> Quantity Price </th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td class="sbd_main_photo"></td>
+                        <td class="sbd_item_description"></td>
+                        <td class="sbd_item_price"></td>
+                        <td class="sbd_quantity"></td>
+                        <td class="sbd_quantity_price"></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+
+        <div class="">
+            <div class="sbd_sub_total_comment"> Sub Total Comment </div>
+            <div class="sbd_sub_total"> Sub Total: </div>
+        </div>
+
+        <div class="">
+            <div class="sbd_coupon_code"> Coupon Code </div>
+            <div class="sbd_continue_shopping"> Continue Shopping </div>
+            <div class="sbd_to_checkout"> Proceed to Checkout </div>
+        </div>
+
+    </div>
+
+<script src="../js/bootstrap.js"></script>
+
+    <script>
+
+        var productID = 100000001;
+
+        var getPictures = function(productID, callback) {
+            var arrayPictures = [];
+            $.getJSON('../json/pictures.json', function(data){
+                arrayPictures = data;
+                var pictures = data.filter(function(item){
+                    return item.id === productID;
+                });
+                callback(pictures);
+            });
+        };
+        getPictures(100000001, function(pictures){
+            console.log(pictures);
+            var myHtml = pictures.map(function(item){
+                return '<img src="../img/quadcopters/' + item.picture_name + '/' + item.file_name + '">';
+            });
+            $('.sbd_main_photo').html(myHtml);
+            $('.sbd_main_photo img').css('height', '');
+        });
+
+        var getName = function(productID, callback){
+            var arrayPrices = [];
+            $.getJSON('../json/products.json', function(data){
+                arrayPrices = data;
+                var price = data.filter(function(item){
+                    return item.id === productID;
+                });
+                callback(price);
+            });
+        };
+        getName(100000001, function(name){
+            console.log(name);
+            var myHtml = name.map(function(item){
+                return item.product_name;
+            });
+            $('.sbd_item_description').html(myHtml);
+        });
+
+        var getPrice = function(productID, callback){
+            var arrayPrices = [];
+            $.getJSON('../json/products.json', function(data){
+                arrayPrices = data;
+                var price = data.filter(function(item){
+                    return item.id === productID;
+                });
+                callback(price);
+            });
+        };
+        getPrice(100000001, function(price){
+            console.log(price);
+            var myHtml = price.map(function(item){
+                return '$' + item.unit_price;
+            });
+            $('.sbd_item_price').html(myHtml);
+        });
+
+    </script>
+
+</body>
+</html>

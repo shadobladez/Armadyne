@@ -1,0 +1,74 @@
+.sbd_footer {
+    background-color: #808080;
+    color: white;
+    padding-left: 28%;
+    height: 120px;
+}
+
+a:link{
+    color: white;
+}
+
+a:visited{
+    color: white;
+}
+
+.sbd_login {
+    float: left;
+}
+
+.sbd_register {
+    float: left;
+}
+
+.sbd_copyright{
+    color:white;
+}
+
+.sbd_products_col{
+    float: left;
+    margin: 10px;
+}
+
+.sbd_products{
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.sbd_help_support_col{
+    float: left;
+    margin: 10px;
+}
+
+.sbd_support{
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.sbd_where_to_buy_col{
+    float: left;
+    margin: 10px;
+}
+
+.sbd_where_to_buy{
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.sbd_secure_shopping_col{
+    float: left;
+    margin: 10px;
+}
+
+.sbd_paypal img{
+    padding: 0 10px;
+    background-color: white;
+    min-width: 290px;
+    width: 290px;
+    border-radius: 15px;
+}
+
+.sbd_batteries{
+    margin: 10px;
+    padding-top: 25px;
+}

@@ -1,0 +1,51 @@
+.sbd-time-container {
+    text-align: center;
+    margin: 30px 0px;
+}
+
+.sbd-countdown {
+    min-height: 210px;
+    color: white;
+    width: 100%;
+    background-color: #CA0F0F;
+}
+
+.days {
+    font-size: 40px;
+}
+
+.sbd-days {
+    min-width: 160px;
+    width:25%;
+    float:left;
+}
+
+.hours {
+    font-size: 40px;
+}
+
+.sbd-hours {
+    min-width: 160px;
+    width:25%;
+    float:left;
+}
+
+.minutes {
+    font-size: 40px;
+}
+
+.sbd-minutes {
+    min-width: 160px;
+    width:25%;
+    float:left;
+}
+
+.seconds {
+    font-size: 40px;
+}
+
+.sbd-seconds {
+    min-width: 160px;
+    width:25%;
+    float:left;
+}

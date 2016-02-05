@@ -1,0 +1,9 @@
+{
+
+	"table": "customers"
+	,"data": [
+	  	{"id": "001", "name": "Joel Jan", "userName":"", "address": "12542 Wedgewood Cir Tustin CA 92780", "phone": "714-801-5757" , "email": "joeljan92@hotmail.com"}
+	,  	{"id": "002", "name": "", "userName": "", "address": "", "phone": "" , "email": ""}
+	]
+
+}

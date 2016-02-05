@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Product Details 01</title>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <link rel='stylesheet' href="../css/sbd_bootstrap_footer.css">
+    <link rel='stylesheet' href="../css/sbd_header.css">
+    <link rel="stylesheet" href="../css/productDetails.css">
+    <link rel='stylesheet' href="../css/retail.css">
+    <script src="../lib/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <div class="sbd_main_header"></div>
+    <div class="main_body">
+        <div class="product_box">
+            <div class="product_image">
+                <img id="bigImage" src="../img/quadcopters/L6039/P1030634.png">
+            </div>
+            <div class="image_selector">
+                <img class="selector01" src="../img/quadcopters/L6039/P1030634.png" onmouseover="img_switch('../img/drones/Lance_Photos/2015-12-16/Small/png/L6039/P1030634.png')">
+                <img class="selector01" src="../img/quadcopters/L6039/P1030621.png" onmouseover="img_switch('../img/drones/Lance_Photos/2015-12-16/Small/png/L6039/P1030621.png')">
+                <img class="selector01" src="../img/quadcopters/L6039/P1030623.png" onmouseover="img_switch('../img/drones/Lance_Photos/2015-12-16/Small/png/L6039/P1030623.png')">
+                <img class="selector01" src="../img/quadcopters/L6039/P1030649.png" onmouseover="img_switch('../img/drones/Lance_Photos/2015-12-16/Small/png/L6039/P1030649.png')">
+                <img class="selector01" src="../img/quadcopters/L6039/P1030639.png" onmouseover="img_switch('../img/drones/Lance_Photos/2015-12-16/Small/png/L6039/P1030639.png')">
+            </div>
+        </div>
+        <div class="product_details">
+            <div class="product_name"> L6039 </div>
+
+            <div class="sbd_features"></div>
+
+            <div class="product_price"> Out of Stock!</div>
+<!--
+            <div class="product_price"> $50.00 </div>
+            <div class="product_btn">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="5G4ZG5NG5S2QY">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+                <div class="share_web">
+                    <img src="../img/icons/transparent/facebook.png">
+                    <img src="../img/icons/transparent/google_plus.png">
+                    <img src="../img/icons/transparent/instagram.png">
+                    <img src="../img/icons/transparent/linked_in.png">
+                    <img src="../img/icons/transparent/pinterest.png">
+                    <img src="../img/icons/transparent/tumblr.png">
+                    <img src="../img/icons/transparent/twitter.png">
+                    <img src="../img/icons/transparent/youtube.png">
+                    <div class="sbd-clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+-->
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="sbd_main_footer"></div>
+
+    <script src="../js/sbd_utils.js"></script>
+
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script>
+        onClick = function(){
+            selector01.onclick
+        };
+
+        function img_switch(source){
+                $('#bigImage').attr('src', source);
+        }
+
+        $('.sbd_main_header').load('../Header/sbd_header.html');
+//       $('.sbd_features').load('../Products/Features/features.html');
+        $('.sbd_main_footer').load('../Footer/sbd_bootstrap_footer.html');
+
+    </script>
+</body>
+</html>
