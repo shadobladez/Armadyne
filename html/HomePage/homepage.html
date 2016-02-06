@@ -29,9 +29,8 @@
         </div>
         -->
 
-        <div class="sbd-secondary-retail-group">
-            <div class="sbd-clear"></div>
-        </div>
+        <div class="sbd_secondary_retail_group col-sm-12"></div>
+
 
         <div class="sbd-contact">
             <div class="sbd-clear"></div>
@@ -48,6 +47,37 @@
 
 <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
 <script src="../js/bootstrap.min.js"></script>
+
+<script>
+
+    var getProducts = function(callback) {
+        var products;
+        if (products === undefined) {
+            $.getJSON('../json/products.json', function (data) {
+                products = data;
+                callback(products);
+            });
+        }else{
+            callback(products);
+        }
+    };
+
+    getProducts(function(productList) {
+        console.log(productList);
+        var previousGroup = "";
+        var products = productList.map(function(item) {
+            var myHtml = "";
+            if (item.product_group !== previousGroup) {
+                previousGroup = item.product_group;
+                // myHtml += '<li role="separator" class="divider">' + '</li>';
+            }
+            myHtml += '<a href="#" class="list-group-item col-sm-4">' + item.product_name + '</a>';
+            return myHtml;
+        });
+        $('.sbd_secondary_retail_group').html(products.join(""));
+    });
+
+</script>
 
 <script>
 
