@@ -63,7 +63,7 @@ div {
 	border: 1px crimson solid;
 }
 
-.sbd_carousel img {
+.sbd_photo_selector img {
 	width: 20%;
 }
 
@@ -82,6 +82,10 @@ div {
 
 .sbd_features {
 	border: 1px steelblue solid;
+}
+
+.sbd_quantity {
+	padding: 6px 0 6px 25px;
 }
 
 .sbd_order {

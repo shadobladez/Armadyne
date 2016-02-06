@@ -25,12 +25,7 @@
                 <div class="sbd_row row">
                     <div class="sbd_main_photo col-sm-12">
                     </div>
-                    <div class="row sbd_photo_selector">
-                        <div class="sbd_carousel col-sm-12">
-                            <img src="../img/quadcopters/L6052/L6052_yellow_01.png">
-                            <img src="../img/quadcopters/L6052/L6052_yellow_02.png">
-                        </div>
-                    </div>
+                    <div class="sbd_photo_selector col-sm-12"></div>
                 </div>
             </div>
             <div class="sbd_description col-sm-5">
@@ -253,7 +248,7 @@
             var myHtml = pictures.map(function(item){
                 return '<img src="../img/quadcopters/' + item.picture_name + '/' + item.file_name + '">';
             });
-            $('.sbd_carousel').html(myHtml);
+            $('.sbd_photo_selector').html(myHtml);
         });
 
         function img_switch(source){
