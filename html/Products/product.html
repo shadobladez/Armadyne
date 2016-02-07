@@ -5,6 +5,7 @@
     <title>Product Details 01</title>
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/sbd_bootstrap_footer.css">
     <script src="../lib/jquery-2.1.4.js"></script>
 </head>
 <body>
@@ -15,21 +16,22 @@
 
         <div class="sbd_breadcrumbs col-md-12">
             <div class="sbd_row row">
-                <div class="sbd_home col-md-2"> Home </div>
-                <div class="sbd_products col-md-2"> Products </div>
+                <ol class="breadcrumb">
+                    <li class="sbd_home"><a href="#"> Home </a></li>
+                    <li class="sbd_products active"> Products </li>
+                </ol>
             </div>
         </div>
 
         <div class="sbd_main_body col-sm-12">
             <div class="sbd_pictures col-sm-7">
                 <div class="sbd_row row">
-                    <div class="sbd_main_photo col-sm-12">
-                    </div>
+                    <div class="sbd_main_photo col-sm-12"></div>
                     <div class="sbd_photo_selector col-sm-12"></div>
                 </div>
             </div>
+
             <div class="sbd_description col-sm-5">
-                Description
                 <div class="sbd_row row">
                     <div class="sbd_product_name"> Name: L6052 </div>
                     <div class="sbd_product_price"> Price: $50.00 </div>
@@ -39,12 +41,15 @@
                         <ul class="sbd_feature_information"></ul>
                     </div>
                 </div>
+
                 <div class="sbd_row row">
-                <!--
-                    <div class="sbd_packages"> Packages </div>
-                -->
                     <div class="sbd_order col-sm-12">
-                        <div class="sbd_quantity col-sm-2 col-sm-offset-1"> Qty: </div>
+
+                        <div class="sbd_quantity col-sm-2 col-sm-offset-1">
+                            <label for="sbd_quantity"> Qty: </label>
+                            <input type="text" class="form-control" id="sbd_quantity">
+                        </div>
+
                         <div class="sbd_add_to_cart col-sm-3 col-sm-offset-1">
                             <button type="button" class="btn btn-default" data-toggle="modal" data-target=".sbd_added_to_cart"> Added To Cart </button>
                         </div>
@@ -96,17 +101,21 @@
                             <button type="button" class="btn btn-default"> Buy Now </button>
                         </div>
                     </div>
-                    <div class="sbd_shipping_time"> Available to ship: </div>
+                    <!--
+                        <div class="sbd_shipping_time"> Available to ship: </div>
+                    -->
                 </div>
             </div>
         </div>
 
-        <ul class="sbd_tabs nav nav-tabs col-sm-12">
-            <li class="col-sm-3"><a href="#sbd_overview"><div class="sbd_overview"> Overview </div></a></li>
-            <li class="col-sm-3"><a href="#sbd_tech_specs"><div class="sbd_tech_specs"> Tech Specs </div></a></li>
-            <li class="col-sm-3"><a href="#sbd_in_the_box"><div class="sbd_in_the_box"> In The Box </div></a></li>
-            <li class="col-sm-3"><a href="#sbd_faq"><div class="sbd_faq"> FAQ </div></a></li>
-        </ul>
+        <div class="sbd_tabs_names">
+            <ul class="sbd_tabs nav nav-tabs col-sm-12">
+                <li class="col-sm-3"><a href="#sbd_overview"><div class="sbd_overview"> Overview </div></a></li>
+                <li class="col-sm-3"><a href="#sbd_tech_specs"><div class="sbd_tech_specs"> Tech Specs </div></a></li>
+                <li class="col-sm-3"><a href="#sbd_in_the_box"><div class="sbd_in_the_box"> In The Box </div></a></li>
+                <li class="col-sm-3"><a href="#sbd_faq"><div class="sbd_faq"> FAQ </div></a></li>
+            </ul>
+        </div>
 
         <div class="sbd_information col-sm-12">
             <div class="tab-content">
@@ -150,11 +159,8 @@
             </div>
         </div>
 
-        <div class="sbd_recommended col-sm-12"> Recommended </div>
+        <div class="sbd_main_footer col-sm-12"></div>
 
-
-    <div class="sbd-footer">
-        <div class="sbd_main_footer"></div>
     </div>
 
     <script src="../js/bootstrap.js"></script>

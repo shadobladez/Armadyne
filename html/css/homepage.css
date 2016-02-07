@@ -4,12 +4,12 @@
 
     .sbd_slider {
         height: 300px;
-        border: 1px solid black;
     }
 
     .sbd-vezka-group {
         height: 200px;
         border: 1px solid black;
+        border-radius: 4px;
     }
 
     .sbd-vezka {
@@ -21,7 +21,9 @@
 
     .sbd-secondary-retail-group {
         height: 200px;
-        border: 1px solid black;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #CCCCCC;
     }
 
     .sbd-retail {
@@ -31,4 +33,11 @@
 
     .sbd-clear {
         clear: both;
+    }
+
+    .sbd_main_footer {
+        margin: 5px;
+        padding-top: 5px;
+        border: 1px solid #CCCCCC;
+        border-radius: 10px;
     }
