@@ -61,7 +61,7 @@
                 previousGroup = item.product_group;
                 // myHtml += '<li role="separator" class="divider">' + '</li>';
             }
-            myHtml += '<a href="#" class="list-group-item col-sm-4">' + item.product_name + '</a>';
+            myHtml += '<a href="#" class="list-group-item col-sm-6">' + item.product_name + '</a>';
             return myHtml;
         });
         $('.sbd_product_list_footer').html(products.join(""));
