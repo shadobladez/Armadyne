@@ -3,12 +3,10 @@
 	,	{"id": 100000002, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "picture_name": "L6052"		, "parent_id": 100000001	, "file_name": "L6052_yellow_02.png"}
 	,	{"id": 100000003, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "picture_name": "L6052"		, "parent_id": 100000001	, "file_name": "L6052_yellow_03.png"}
 	,	{"id": 100000004, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "picture_name": "L6052"		, "parent_id": 100000001	, "file_name": "L6052_yellow_04.png"}
-	,	{"id": 100000005, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "picture_name": "L6052"		, "parent_id": 100000001	, "file_name": "L6052_yellow_05.png"}
 	,	{"id": 100000006, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "picture_name": "L6052W"		, "parent_id": 100000002	, "file_name": "L6052W_yellow-04.png"}
 	,	{"id": 100000007, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "picture_name": "L6052W"		, "parent_id": 100000002	, "file_name": "L6052W_yellow-05.png"}
 	,	{"id": 100000008, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "picture_name": "L6052W"		, "parent_id": 100000002	, "file_name": "L6052W_yellow-06.png"}
 	,	{"id": 100000009, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "picture_name": "L6052W"		, "parent_id": 100000002	, "file_name": "L6052W_yellow-07.png"}
-	,	{"id": 100000010, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "picture_name": "L6052W"		, "parent_id": 100000002	, "file_name": "L6052W_yellow-09.png"}
 	,	{"id": 100000011, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "picture_name": "L6055"		, "parent_id": 100000003	, "file_name": ""}
 	,	{"id": 100000012, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "picture_name": "L6055W"		, "parent_id": 100000004	, "file_name": ""}
 	,	{"id": 100000013, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "picture_name": "JXD509W"	, "parent_id": 100000005	, "file_name": ""}

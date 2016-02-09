@@ -27,7 +27,12 @@ div {
 	border-radius: 10px;
 }
 
+img {
+	max-width: 100%;
+}
+
 .sbd_main_photo img {
+	max-width: 100%;
 	width: 100%;
 }
 
@@ -40,8 +45,9 @@ div {
 }
 
 .sbd_photo_selector img {
-	width: 18%;
-	margin: 0 5px;
+	max-width: 20%;
+	min-width: 20%;
+	margin: 0 10px;
 }
 
 .sbd_description {
