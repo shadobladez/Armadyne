@@ -50,11 +50,10 @@
     var getProducts = function(callback) {
         var products;
         if (products === undefined) {
-//            $.getJSON('../json/products.json', function (data) {
-            $.ajax({url: 'http://104.238.102.149:3000', success: function(data){
+            $.getJSON('../json/products.json', function (data) {
                 products = data;
                 callback(products);
-            }});
+            });
         }else{
             callback(products);
         }
