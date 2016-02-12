@@ -195,7 +195,7 @@
                     previousGroup = item.product_group;
                     myHtml += '<li role="separator" class="divider">' + '</li>';
                 }
-                myHtml += '<li>' + '<a href="#">' + item.product_name + '</a>' +'</li>';
+                myHtml += '<li>' + '<a href="../Products/' + item.product_name + '.html">' + item.product_name + '</a>' +'</li>';
                 return myHtml;
             });
             $('.sbd_product_list').html(products.join(""));
