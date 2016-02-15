@@ -4,3 +4,5 @@ access.log
 .idea/.name
 *.iml
 templates/
+*.psd
+*.png
