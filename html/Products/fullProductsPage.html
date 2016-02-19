@@ -25,58 +25,11 @@
 
         <div class="sbd_main_body col-sm-12">
 
-            <div class="sbd_product_lineup col-sm-4">
-                <div class="sbd_product_box">
-                    <div class="sbd_product_name"> L6052W </div>
-                    <div class="sbd_product_img"><img src="../img/quadcopters/L6052W/IMG_2140.JPG"></div>
-                    <div class="sbd_product_description"></div>
-                    <div class="sbd_product_link"></div>
-                </div>
-            </div>
-
-            <div class="sbd_product_lineup col-sm-4">
-                <div class="sbd_product_box">
-                    <div class="sbd_product_name"> L6052W </div>
-                    <div class="sbd_product_img"><img src="../img/quadcopters/L6052W/IMG_2140.JPG"></div>
-                    <div class="sbd_product_description"></div>
-                    <div class="sbd_product_link"></div>
-                </div>
-            </div>
-
-            <div class="sbd_product_lineup col-sm-4">
-                <div class="sbd_product_box">
-                    <div class="sbd_product_name"> L6052W </div>
-                    <div class="sbd_product_img"><img src="../img/quadcopters/L6052W/IMG_2140.JPG"></div>
-                    <div class="sbd_product_description"></div>
-                    <div class="sbd_product_link"></div>
-                </div>
-            </div>
-
-            <div class="sbd_product_lineup col-sm-4">
-                <div class="sbd_product_box">
-                    <div class="sbd_product_name"> L6052W </div>
-                    <div class="sbd_product_img"><img src="../img/quadcopters/L6052W/IMG_2140.JPG"></div>
-                    <div class="sbd_product_description"></div>
-                    <div class="sbd_product_link"></div>
-                </div>
-            </div>
-
-            <div class="sbd_product_lineup col-sm-4">
-                <div class="sbd_product_box">
-                    <div class="sbd_product_name"> L6052W </div>
-                    <div class="sbd_product_img"><img src="../img/quadcopters/L6052W/IMG_2140.JPG"></div>
-                    <div class="sbd_product_description"></div>
-                    <div class="sbd_product_link"></div>
-                </div>
-            </div>
-
-            <div class="sbd_product_lineup col-sm-4">
-                <div class="sbd_product_box">
-                    <div class="sbd_product_name"> L6052W </div>
-                    <div class="sbd_product_img"><img src="../img/quadcopters/L6052W/IMG_2140.JPG"></div>
-                    <div class="sbd_product_description"></div>
-                    <div class="sbd_product_link"></div>
-                </div>
+            <div class="sbd_product_box">
+                <div class="sbd_product_name"></div>
+                <div class="sbd_product_img"></div>
+                <div class="sbd_product_description"></div>
+                <div class="sbd_product_link"></div>
             </div>
 
         </div>
@@ -87,10 +40,63 @@
 
     <script src="../js/bootstrap.js"></script>
 
+    <script>
+        var SBD = SBD || {};
+        //createProduct
+        var getProducts = function(callback) {
+            var products;
+            if (products === undefined) {
+                $.getJSON('../json/products.json', function (data) {
+                    SBD.products = data;
+                    products = data;
+                    callback(products);
+                });
+            }else{
+                callback(products);
+            }
+        };
+
+        var getPictures = function(callback) {
+            var products;
+            if (products === undefined) {
+                $.getJSON('../json/pictures.json', function (data) {
+                    SBD.pictures = data;
+                    products = data;
+                    callback(products);
+                });
+            }else{
+                callback(products);
+            }
+        };
+
+        var getMainPictureByProduct = function (product_id) {
+            return item.file_name
+        };
+
+        getPictures(function(){});
+
+        getProducts(function(createProduct){
+            console.log("creatingProduct");
+            console.log(createProduct);
+            var myHtml = createProduct.map(function(item){
+                return  '<div class="sbd_product_box col-sm-3">' +
+                        '<div class="sbd_product_name">' + item.product_name + '</div>' +
+                        '<div class="sbd_product_img">' + '<a href="../Products/' + item.product_name +'.html">' + '<img src="../img/quadcopters/' + item.product_group + '/' + item.product_main_img + '">' + '</a>' + '</div>' +
+                        '<div class="sbd_product_description">'+ 'Small Description Area' + '</div>' +
+                        '<div class="sbd_product_price">' + '$' + item.unit_price + '</div>' +
+                        '<div class="sbd_product_link">' + '<a href="#">' + 'Link' + '</a>' + '</div>' +
+                        '</div>';
+            });
+            $('.sbd_main_body').html(myHtml.join(""));
+        });
+
+    </script>
+
         <script>
             $('.sbd_main_header').load('../Header/sbd_bootstrap_header.html');
             $('.sbd_main_footer').load('../Footer/sbd_bootstrap_footer.html');
         </script>
+
 
 </body>
 </html>

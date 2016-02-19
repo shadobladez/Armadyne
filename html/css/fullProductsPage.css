@@ -1,9 +1,27 @@
-.sbd_product_box {
+.sbd_main_body {
 	margin: 10px;
-	padding: 10px;
+}
+
+.sbd_product_box {
+	margin: 0.5% 4%;
 	border: 1px solid grey;
+}
+
+.sbd_product_name {
+	text-align: center;
 }
 
 .sbd_product_img img{
 	width: 100%;
+}
+
+.sbd_product_description {
+	text-align: center;
+}
+
+.sbd_product_price {
+	text-align: center;
+}
+.sbd_product_link {
+	text-align: center;
 }

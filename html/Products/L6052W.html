@@ -180,7 +180,7 @@
         getPictures(100000006, function(pictures){
            console.log(pictures);
             var myHtml = pictures.map(function(item){
-               return '<img src="../img/quadcopters/' + item.picture_name + '/' + item.file_name +'">';
+               return '<img src="../img/quadcopters/' + item.picture_group + '/' + item.file_name +'">';
             });
             $('.sbd_main_photo').html(myHtml);
             $('.sbd_main_photo img').css('height', '');
@@ -198,7 +198,7 @@
         listPictures(100000001, function(pictures){
             console.log(pictures);
             var myHtml = pictures.map(function(item){
-                return '<img src="../img/quadcopters/' + item.picture_name + '/' + item.file_name + '">';
+                return '<img src="../img/quadcopters/' + item.picture_group + '/' + item.file_name + '">';
             });
             $('.sbd_photo_selector').html(myHtml);
         });

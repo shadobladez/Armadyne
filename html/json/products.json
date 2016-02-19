@@ -1,9 +1,9 @@
 [
-		{"id": 100000001, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "product_group": "L6052"		,	"product_code": "L6052W",	"product_name": "L6052W"	, "unit_price": "90.00", "stock": 50}
-	,	{"id": 100000002, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "product_group": "L6055"		,	"product_code": "L6055W",	"product_name": "L6055W"	, "unit_price": "00.00", "stock": 50}
-	,	{"id": 100000003, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "product_group": "JXD509"	,	"product_code": "JXD509W",	"product_name": "JXD509W"	, "unit_price": "00.00", "stock": 50}
-	,	{"id": 100000004, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "product_group": "JXD509"	,	"product_code": "JXD509G",	"product_name": "JXD509G"	, "unit_price": "00.00", "stock": 50}
-	,	{"id": 100000005, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "product_group": "MJX"		,	"product_code": "MJX101",	"product_name": "MJX101"	, "unit_price": "00.00", "stock": 50}
-	,	{"id": 100000006, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "product_group": "CX"		,	"product_code": "CX-20",	"product_name": "CX-20"		, "unit_price": "00.00", "stock": 50}
+		{"id": 100000001, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "product_group": "L6052"		,	"product_code": "L6052W",	"product_name": "L6052W"	, "unit_price": "90.00", "stock": 50, "product_main_img": "IMG_2140.jpg", "product_page": ""}
+	,	{"id": 100000002, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "product_group": "L6055"		,	"product_code": "L6055W",	"product_name": "L6055W"	, "unit_price": "00.00", "stock": 50, "product_main_img": "IMG_2095.jpg", "product_page": ""}
+	,	{"id": 100000003, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "product_group": "JXD509"	,	"product_code": "JXD509W",	"product_name": "JXD509W"	, "unit_price": "00.00", "stock": 50, "product_main_img": "IMG_2023.jpg", "product_page": ""}
+	,	{"id": 100000004, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "product_group": "JXD509"	,	"product_code": "JXD509G",	"product_name": "JXD509G"	, "unit_price": "00.00", "stock": 50, "product_main_img": "IMG_2023.jpg", "product_page": ""}
+	,	{"id": 100000005, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "product_group": "MJX"		,	"product_code": "MJX101",	"product_name": "MJX101"	, "unit_price": "00.00", "stock": 50, "product_main_img": "IMG_2119.jpg", "product_page": ""}
+	,	{"id": 100000006, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "product_group": "CX"		,	"product_code": "CX-20",	"product_name": "CX-20"		, "unit_price": "00.00", "stock": 50, "product_main_img": ""			, "product_page": ""}
 
 ]

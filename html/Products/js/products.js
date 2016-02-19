@@ -2,14 +2,14 @@ var products =
 	[	{"id": "001", "name": "L6039", 	"creator": "", "price": 50.00, "inventory": 0, "main_img": "P1030634"}
 	,	{"id": "001", "name": "L6039W", "creator": "", "price": 90.00, "inventory": 0, "main_img": "P1030646"}
 	,	{"id": "001", "name": "L6052", 	"creator": "", "price": 50.00, "inventory": 0, "main_img": "P1030598"}
-	,	{"id": "001", "name": "L6052W", "creator": "", "price": 90.00, "inventory": 0, "main_img": "P1030480"}
+	,	{"id": "001", "name": "L6052", "creator": "", "price": 90.00, "inventory": 0, "main_img": "P1030480"}
 	];
 
 var totalInventory =
 	[	{"id": "001", "name": "L6039", 	"price": 50.00, "inventory": 19 }
 	,	{"id": "002", "name": "L6039W", "price": 90.00, "inventory": 7 }
 	,	{"id": "003", "name": "L6052", 	"price": 50.00, "inventory": 11 }
-	,	{"id": "004", "name": "L6052W", "price": 90.00, "inventory": 4 }
+	,	{"id": "004", "name": "L6052", "price": 90.00, "inventory": 4 }
 	];
 
 var totalPrice = [];
