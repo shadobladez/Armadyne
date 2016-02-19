@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Product Details 01</title>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/sbd_bootstrap_footer.css">
+    <script src="../lib/jquery-2.1.4.js"></script>
+</head>
+<body>
+
+    <div class="sbd_wrapper col-sm-10 col-sm-offset-1">
+
+        <div class="sbd_main_header"></div>
+
+        <div class="sbd_breadcrumbs col-md-12">
+            <div class="sbd_row row">
+                <ol class="breadcrumb">
+                    <li class="sbd_home"><a href="../HomePage/homepage.html"> Home </a></li>
+                    <li class="sbd_products"><a href="../Products/fullProductsPage.html"> All Product </a></li>
+                    <li class="sbd_products active"> L6052W </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="sbd_main_body col-sm-12">
+            <div class="sbd_pictures col-sm-6">
+                <div class="sbd_row row">
+                    <div class="sbd_main_photo col-sm-12"></div>
+                    <div class="sbd_photo_selector col-sm-12"></div>
+                </div>
+            </div>
+
+            <div class="sbd_description col-sm-5">
+                <div class="sbd_row row">
+                    <div class="sbd_product_name"></div>
+                    <div class="sbd_product_price"></div>
+                </div>
+                <div class="sbd_row row">
+                    <div class="sbd_features"> Features:
+                        <ul class="sbd_feature_information"></ul>
+                    </div>
+                </div>
+
+                <div class="sbd_row row">
+                    <div class="sbd_order col-sm-12">
+
+                        <div class="sbd_quantity col-sm-1 col-sm-offset-1">
+                            <label for="sbd_quantity"> Qty: </label>
+                        </div>
+                        <div class="sbd_quantity_number col-sm-2">
+                            <input type="text" class="form-control" id="sbd_quantity">
+                        </div>
+
+                        <div class="sbd_add_to_cart col-sm-3">
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target=".sbd_added_to_cart"> Added To Cart </button>
+                        </div>
+
+                        <div class="modal fade sbd_added_to_cart" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button class="close" data-dismiss="modal" type="button">
+                                            <span aria-hidden="true"> ×</span>
+                                            <span class="sr-only">Close</span>
+                                        </button>
+                                        <h4 class="modal-title"> Added To Cart </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-xs-12 add-to-tip">
+                                                <div class="alert alert-success">
+                                                    <i class="fa fa-check-circle"></i>
+                                                    <span>You have added this item to your cart</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-8 horizontal_center vertical_center">
+                                                <div class="row">
+                                                    <div class="sbd_cart_img col-xs-3"></div>
+                                                    <div class="col-xs-9">
+                                                        <span class="cart-product-name"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4 horizontal_center vertical_center text-right">
+                                                <small class="land-product price-normal cart-product-price"></small>
+                                            </div>
+                                        </div>
+                                        <div class="view-bar">
+                                            <a class="btn btn-default" data-dismiss="modal"> Continue Shopping</a>
+                                            <a class="btn btn-default" href="#"> Continue To Checkout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sbd_buy_now col-sm-2 col-sm-offset-1">
+                            <button type="button" class="btn btn-default"> Buy Now </button>
+                        </div>
+                    </div>
+                    <!--
+                        <div class="sbd_shipping_time"> Available to ship: </div>
+                    -->
+                </div>
+            </div>
+        </div>
+
+        <div class="sbd_tabs_names">
+            <ul class="sbd_tabs nav nav-tabs col-sm-12">
+                <li class="col-sm-3"><a href="#sbd_videos"><div class="sbd_videos"> Videos </div></a></li>
+                <li class="col-sm-3"><a href="#sbd_tech_specs"><div class="sbd_tech_specs"> Tech Specs </div></a></li>
+                <li class="col-sm-3"><a href="#sbd_in_the_box"><div class="sbd_in_the_box"> In The Box </div></a></li>
+                <li class="col-sm-3"><a href="#sbd_faq"><div class="sbd_faq"> FAQ </div></a></li>
+            </ul>
+        </div>
+
+        <div class="sbd_information col-sm-12">
+            <div class="tab-content">
+                <div id="sbd_videos" class="tab-pane fade in active">
+                    Random Video Box
+                </div>
+
+                <div id="sbd_tech_specs" class="tab-pane fade">
+                    Tech Specs Box
+                </div>
+
+                <div id="sbd_in_the_box" class="tab-pane fade">
+                    In The Box
+                </div>
+
+                <div id="sbd_faq" class="tab-pane fade">
+                    FAQ Box
+                </div>
+            </div>
+        </div>
+
+        <div class="sbd_main_footer col-sm-12"></div>
+
+    </div>
+
+    <script src="../js/bootstrap.js"></script>
+
+    <script>
+        $('.sbd_main_header').load('../Header/sbd_bootstrap_header.html');
+        $('.sbd_main_footer').load('../Footer/sbd_bootstrap_footer.html');
+
+    </script>
+
+    <script>
+
+        var productID = 100000001;
+
+        var getProducts = function(callback) {
+            var products;
+            if (products === undefined) {
+                $.getJSON('../json/products.json', function (data) {
+                    products = data;
+                    callback(products);
+                });
+            }else{
+                callback(products);
+            }
+        };
+
+        //Main Picture
+        var getPictures = function(productID, callback) {
+            var arrayPictures = [];
+            $.getJSON('../json/pictures.json', function(data){
+                arrayPictures = data;
+                var pictures = data.filter(function(item){
+                    return item.id === productID;
+                });
+                callback(pictures);
+            });
+        };
+        getPictures(100000006, function(pictures){
+           console.log(pictures);
+            var myHtml = pictures.map(function(item){
+               return '<img src="../img/quadcopters/' + item.picture_name + '/' + item.file_name +'">';
+            });
+            $('.sbd_main_photo').html(myHtml);
+            $('.sbd_main_photo img').css('height', '');
+        });
+
+        //Picture Picker
+        var listPictures = function(productID, callback){
+            $.getJSON('../json/pictures.json', function(data) {
+                var pictures = data.filter(function(item) {
+                    return item.parent_id === productID;
+                });
+                callback(pictures);
+            });
+        };
+        listPictures(100000001, function(pictures){
+            console.log(pictures);
+            var myHtml = pictures.map(function(item){
+                return '<img src="../img/quadcopters/' + item.picture_name + '/' + item.file_name + '">';
+            });
+            $('.sbd_photo_selector').html(myHtml);
+        });
+
+        function img_switch(source){
+            $('.sbd_main_photo').attr('src', source);
+        }
+
+        $('.sbd_tabs a').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show')
+        });
+
+        //ProductName
+        var getProductName = function(productID, callback){
+            $.getJSON('../json/products.json', function(data) {
+                var productName = data.filter(function(item) {
+                    return item.id === productID;
+                });
+                callback(productName);
+            });
+        };
+        getProductName(100000001, function(productName){
+            console.log(productName);
+            var myHtml = productName.map(function(item){
+                return '<div>' + item.product_name + '</div>';
+            });
+            $('.sbd_product_name').html(myHtml);
+        });
+
+        //ProductPrice
+        var getProductPrice = function(productID, callback){
+            $.getJSON('../json/products.json', function(data) {
+                var productName = data.filter(function(item) {
+                    return item.id === productID;
+                });
+                callback(productName);
+            });
+        };
+        getProductPrice(100000001, function(productName){
+            console.log(productName);
+            var myHtml = productName.map(function(item){
+                return 'Price: $' + item.unit_price;
+            });
+            $('.sbd_product_price').html(myHtml);
+        });
+
+        //Features
+        var getFeatures = function(productID, callback){
+            $.getJSON('../json/features.json', function(data) {
+                var features = data.filter(function(item) {
+                    return item.id === productID;
+                });
+                callback(features);
+            });
+        };
+        getFeatures(100000001, function(features){
+            console.log(features);
+            var myHtml = features.map(function(item){
+                return '<li>' + item.information + '</li>';
+            });
+            $('.sbd_feature_information').html(myHtml.join(""));
+        });
+
+        //TechSpecs
+        var getTechSpecs = function(productID, callback){
+            $.getJSON('../json/techSpecs.json', function(data) {
+                var features = data.filter(function(item) {
+                    return item.id === productID;
+                });
+                callback(features);
+            });
+        };
+        getTechSpecs(100000001, function(techSpecs){
+            console.log("TechSpecs");
+            console.log(techSpecs);
+            var myHtml = techSpecs.map(function(item){
+                return  '<div class="sbd_tech_specs_container col-sm-12">' +
+                        '<div class="sbd_tech_specs_row_left col-sm-1">' + item.tech_group + '</div> ' +
+                        '<div class="sbd_tech_specs_row_middle col-sm-3">' + item.tech_label + '</div>' +
+                        '<div class="sbd_tech_specs_row_right col-sm-8">' + item.tech_value + '</div>' +
+                        '</div>';
+            });
+            $('#sbd_tech_specs').html(myHtml.join(""));
+        });
+
+
+    </script>
+
+</body>
+</html>
