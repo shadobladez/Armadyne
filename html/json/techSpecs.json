@@ -1,6 +1,21 @@
 [
-		{"id": 100000001, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000001, "tech_group": "", "tech_label": "", "tech_value": ""}
-	,	{"id": 100000002, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000002, "tech_group": "", "tech_label": "", "tech_value": ""}
+		{"id": 100000001, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000001, "tech_group": "Aircraft"		, "tech_label": "UFO Size"							, "tech_value": "35 x 35 x 7 cm"}
+	,	{"id": 100000001, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000001, "tech_group": "Aircraft"		, "tech_label": "UFO Weight"						, "tech_value": "0.737 kg"}
+	,	{"id": 100000001, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000001, "tech_group": "Aircraft"		, "tech_label": "UFO Flight Time With Camera"		, "tech_value": "7-8 Minutes"}
+	,	{"id": 100000001, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000001, "tech_group": "Aircraft"		, "tech_label": "UFO Flight Time Without Camera"	, "tech_value": "8-10 Minutes"}
+	,	{"id": 100000001, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000001, "tech_group": "Aircraft"		, "tech_label": "Charge Time"						, "tech_value": "60 Minutes"}
+	,	{"id": 100000001, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000001, "tech_group": "Aircraft"		, "tech_label": "UFO Battery"						, "tech_value": "3.7v 500mah Li-Po battery"}
+	,	{"id": 100000001, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000001, "tech_group": "Aircraft"		, "tech_label": "Control Distance"					, "tech_value": "80-100 Meters"}
+	,	{"id": 100000001, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000001, "tech_group": "Controller"	, "tech_label": "Battery for Controller"			, "tech_value": "4x AA Batteries (Not Included)"}
+
+	,	{"id": 100000002, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000002, "tech_group": "Aircraft"		, "tech_label": "UFO Size"							, "tech_value": "19.50 x 31.00 x 7.00 cm"}
+	,	{"id": 100000002, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000002, "tech_group": "Aircraft"		, "tech_label": "UFO Weight"						, "tech_value": "0.149 kg"}
+	,	{"id": 100000002, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000002, "tech_group": "Aircraft"		, "tech_label": "UFO Flight Time"					, "tech_value": "9 Minutes"}
+	,	{"id": 100000002, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000002, "tech_group": "Aircraft"		, "tech_label": "Charge Time"						, "tech_value": "90 -120 Minutes"}
+	,	{"id": 100000002, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000002, "tech_group": "Aircraft"		, "tech_label": "UFO Battery"						, "tech_value": "3.7V 900mAh Rechargeable Battery"}
+	,	{"id": 100000002, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000002, "tech_group": "Aircraft"		, "tech_label": "Control Distance"					, "tech_value": "100 Meters"}
+	,	{"id": 100000002, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000002, "tech_group": "Controller"	, "tech_label": "Battery for Controller"			, "tech_value": "4x AA Batteries (Not Included)"}
+
 	,	{"id": 100000003, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000003, "tech_group": "", "tech_label": "", "tech_value": ""}
 	,	{"id": 100000004, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000004, "tech_group": "", "tech_label": "", "tech_value": ""}
 	,	{"id": 100000005, "updated_by": "", "updated_at": "yyyy-mm-dd hh:mm:ss.mmm", "status": "", "sequence": "", "parent_id": 100000005, "tech_group": "", "tech_label": "", "tech_value": ""}
