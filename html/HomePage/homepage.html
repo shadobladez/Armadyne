@@ -44,38 +44,28 @@
 
 <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
 <script src="../js/bootstrap.min.js"></script>
+<script src="../model/Products.js"></script>
 
 <script>
+    $(function(){
 
-    var getProducts = function(callback) {
-        var products;
-        if (products === undefined) {
-              $.getJSON('../json/products.json', function (data) {
-//            $.ajax({url: 'http://104.238.102.149:3000', success: function(data){
-                products = data;
-                callback(products);
-//            }});
+        setTimeout (function (){
+        var productList = Products.getData();
+            console.log(productList);
+            var previousGroup = "";
+            var products = productList.map(function(item) {
+                var myHtml = "";
+                if (item.product_group !== previousGroup) {
+                    previousGroup = item.product_group;
+                    // myHtml += '<li role="separator" class="divider">' + '</li>';
+                }
+                myHtml += '<a href="#" class="list-group-item col-sm-4">' + item.product_name + '</a>';
+                return myHtml;
             });
-        }else{
-            callback(products);
-        }
-    };
+            $('.sbd_secondary_retail_group').html(products.join(""));
+        }, 0);
 
-    getProducts(function(productList) {
-        console.log(productList);
-        var previousGroup = "";
-        var products = productList.map(function(item) {
-            var myHtml = "";
-            if (item.product_group !== previousGroup) {
-                previousGroup = item.product_group;
-                // myHtml += '<li role="separator" class="divider">' + '</li>';
-            }
-            myHtml += '<a href="#" class="list-group-item col-sm-4">' + item.product_name + '</a>';
-            return myHtml;
-        });
-        $('.sbd_secondary_retail_group').html(products.join(""));
     });
-
 </script>
 
 <script>

@@ -28,6 +28,7 @@
                         </a>
                         <ul class="sbd_product_list dropdown-menu"></ul>
                     </li>
+                    <li><a href="../Products/fullProductsPage.html"> All Products </a></li>
                     <li class="sbd_services dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             Services
@@ -172,21 +173,14 @@
     </nav>
 
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../model/Products.js"></script>
 
     <script>
-        var getProducts = function(callback) {
-            var products;
-            if (products === undefined) {
-                $.getJSON('../json/products.json', function (data) {
-                    products = data;
-                    callback(products);
-                });
-            }else{
-                callback(products);
-            }
-        };
 
-        getProducts(function(productList) {
+        $(function(){
+
+        setTimeout (function (){
+        var productList = Products.getData();
             console.log(productList);
             var previousGroup = "";
             var products = productList.map(function(item) {
@@ -199,7 +193,9 @@
                 return myHtml;
             });
             $('.sbd_product_list').html(products.join(""));
+            }, 0);
         });
+
     </script>
 
 </body>

@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Product Details 01</title>
-    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+
     <link rel="stylesheet" href="../css/products.css">
     <link rel="stylesheet" href="../css/sbd_bootstrap_footer.css">
-    <script src="../lib/jquery-2.1.4.js"></script>
-</head>
-<body>
 
     <div class="sbd_wrapper col-sm-10 col-sm-offset-1">
 
@@ -19,7 +11,7 @@
                 <ol class="breadcrumb">
                     <li class="sbd_home"><a href="../HomePage/homepage.html"> Home </a></li>
                     <li class="sbd_products"><a href="../Products/fullProductsPage.html"> All Product </a></li>
-                    <li class="sbd_products active"> L6052W </li>
+                    <li class="sbd_current_product active"></li>
                 </ol>
             </div>
         </div>
@@ -152,7 +144,7 @@
 
     <script>
 
-        var productID = 100000001;
+        //var productID = 100000001;
 
         var getProducts = function(callback) {
             var products;
@@ -166,10 +158,27 @@
             }
         };
 
+        //CurrentProduct
+        var getCurrentProductName = function(productID, callback){
+            $.getJSON('../json/products.json', function(data) {
+                var productName = data.filter(function(item) {
+                    return item.id === productID;
+                });
+                callback(productName);
+            });
+        };
+        getCurrentProductName(productID, function(productName){
+            console.log(productName);
+            var myHtml = productName.map(function(item){
+                return '<div>' + ' / ' + item.product_name + '</div>';
+            });
+            $('.sbd_current_product').html(myHtml);
+        });
+
         //Main Picture
         var getPictures = function(productID, callback) {
             var arrayPictures = [];
-            $.getJSON('../json/pictures.json', function(data){
+            $.getJSON('../json/products.json', function(data){
                 arrayPictures = data;
                 var pictures = data.filter(function(item){
                     return item.id === productID;
@@ -177,10 +186,11 @@
                 callback(pictures);
             });
         };
-        getPictures(100000001, function(pictures){
+        getPictures(productID, function(pictures){
+           console.log("MainPicture");
            console.log(pictures);
             var myHtml = pictures.map(function(item){
-               return '<img src="../img/quadcopters/' + item.picture_group + '/' + item.file_name +'">';
+               return '<img src="../img/quadcopters/' + item.product_group + '/' + item.product_main_img +'">';
             });
             $('.sbd_main_photo').html(myHtml);
             $('.sbd_main_photo img').css('height', '');
@@ -195,7 +205,7 @@
                 callback(pictures);
             });
         };
-        listPictures(100000001, function(pictures){
+        listPictures(productID, function(pictures){
             console.log(pictures);
             var myHtml = pictures.map(function(item){
                 return '<img src="../img/quadcopters/' + item.picture_group + '/' + item.file_name + '">';
@@ -221,7 +231,7 @@
                 callback(productName);
             });
         };
-        getProductName(100000001, function(productName){
+        getProductName(productID, function(productName){
             console.log(productName);
             var myHtml = productName.map(function(item){
                 return '<div>' + item.product_name + '</div>';
@@ -238,7 +248,7 @@
                 callback(productName);
             });
         };
-        getProductPrice(100000001, function(productName){
+        getProductPrice(productID, function(productName){
             console.log(productName);
             var myHtml = productName.map(function(item){
                 return 'Price: $' + item.unit_price;
@@ -255,7 +265,7 @@
                 callback(features);
             });
         };
-        getFeatures(100000001, function(features){
+        getFeatures(productID, function(features){
             console.log(features);
             var myHtml = features.map(function(item){
                 return '<li>' + item.information + '</li>';
@@ -267,12 +277,12 @@
         var getTechSpecs = function(productID, callback){
             $.getJSON('../json/techSpecs.json', function(data) {
                 var features = data.filter(function(item) {
-                    return item.id === 100000001;
+                    return item.id === productID;
                 });
                 callback(features);
             });
         };
-        getTechSpecs(100000001, function(techSpecs){
+        getTechSpecs(productID, function(techSpecs){
             console.log("TechSpecs");
             console.log(techSpecs);
             var myHtml = techSpecs.map(function(item){
@@ -285,8 +295,4 @@
             $('#sbd_tech_specs').html(myHtml.join(""));
         });
 
-
     </script>
-
-</body>
-</html>
