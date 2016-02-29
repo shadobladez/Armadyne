@@ -2,8 +2,7 @@
 	max-height: 290px;
 }
 
-.product img {
-	height: 250px;
-	margin-left: auto;
-	margin-right: auto;
+#sbd_carousel_inner img {
+	height: 290px;
+	margin: auto;
 }

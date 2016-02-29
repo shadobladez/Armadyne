@@ -1,6 +1,12 @@
-
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Product Listing</title>
     <link rel="stylesheet" href="../css/products.css">
     <link rel="stylesheet" href="../css/sbd_bootstrap_footer.css">
+    <script src="../lib/jquery-2.1.4.js"></script>
+</head>
 
     <div class="sbd_wrapper col-sm-10 col-sm-offset-1">
 
@@ -46,7 +52,7 @@
                         </div>
 
                         <div class="sbd_add_to_cart col-sm-3">
-                            <button type="button" class="btn btn-default" data-toggle="modal" data-target=".sbd_added_to_cart"> Added To Cart </button>
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target=".sbd_added_to_cart"> Add To Cart </button>
                         </div>
 
                         <div class="modal fade sbd_added_to_cart" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -170,7 +176,7 @@
         getCurrentProductName(productID, function(productName){
             console.log(productName);
             var myHtml = productName.map(function(item){
-                return '<div>' + ' / ' + item.product_name + '</div>';
+                return item.product_name;
             });
             $('.sbd_current_product').html(myHtml);
         });

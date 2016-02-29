@@ -181,7 +181,9 @@
 
         setTimeout (function (){
         var productList = Products.getData();
-            console.log(productList);
+            console.log( "Begin Header Script" );
+            console.log( productList );
+            console.log( "End Header Script" );
             var previousGroup = "";
             var products = productList.map(function(item) {
                 var myHtml = "";
