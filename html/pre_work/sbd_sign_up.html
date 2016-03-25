@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <script src="lib/jquery-2.1.4.js"></script>
+</head>
+<body>
+
+<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target=".sbd_sign_up"> Sign-Up </button>
+
+<!-- Modal Body: sign-up -->
+<div class="modal fade sbd_sign_up" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true"> ×</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title"> D-Up </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label> Email: </label>
+                    <input type="text" class="form-control" id="sbd_email_text" placeholder="someone@example.com">
+                </div>
+                <div class="form-group">
+                    <label> Confirm Email: </label>
+                    <input type="text" class="form-control" id="sbd_confirmation_email" placeholder="someone@example.com">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-default" onclick="sbd_saved()"> Send Email </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+    var savedData = [];
+
+    function sbd_saved() {
+        var id1 = $('#sbd_email_text').val();
+        var id2 = $('#sbd_confirmation_email').val();
+
+        if (id1 === '' || id2 === '') {
+            alert('Both form fields must be entered');
+            return false;
+        }
+
+        if (id1 !== id2) {
+            alert('Not The Same');
+            return false;
+        } else {
+            savedData.push(id2);
+            alert('Submitted');
+        }
+    }
+
+    /*
+    var confirmEmail = document.getElementByID("sbd_confirmation_email");
+
+    function sbd_save(){
+        savedData.push(confirmEmail);
+        console.log(savedData);
+    }
+    */
+
+</script>
+
+</body>
+</html>

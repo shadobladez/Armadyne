@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <script src="../lib/jquery-2.1.4.js"></script>
+</head>
+<body>
+
+<button type="button" class="btn btn-default" data-toggle="modal" data-target=".sbd_login"> Login </button>
+
+<!-- Modal Body: Login -->
+<div class="modal fade sbd_login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true"> ×</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title"> Log-in </h4>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="sbd_login_email"> Email: </label>
+                    <input type="text" class="form-control" id="sbd_login_email" placeholder="someone@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="sbd_login_pwd"> Password: </label>
+                    <input type="password" class="form-control" id="sbd_login_pwd" placeholder="Enter password">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" onclick=""> Log In </button>
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target=".sbd_forgot_password"> Forgot Your Password? </button>
+                </div>
+            </div>
+
+            <!-- Modal Body 2 -->
+            <div class="modal fade sbd_forgot_password" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal" type="button">
+                                <span aria-hidden="true"> ×</span>
+                                <span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="modal-title"> Forgot Your Password?</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="sbd_login_email"> Email: </label>
+                                <input type="text" class="form-control" id="sbd_email_password" placeholder="someone@example.com">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-default"> Send Password Reset </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/bootstrap.min.js"></script>
+
+<script>
+    var savedData = [];
+
+    function sbd_saved() {
+        var id1 = $('#sbd_email_text').val();
+        var id2 = $('#sbd_confirmation_email').val();
+
+        if (id1 === '' || id2 === '') {
+            alert('Both form fields must be entered');
+            return false;
+        }
+
+        if (id1 !== id2) {
+            alert('Not The Same');
+            return false;
+        } else {
+            savedData.push(id2);
+            alert('Submitted');
+        }
+    }
+
+    /*
+     var confirmEmail = document.getElementByID("sbd_confirmation_email");
+
+     function sbd_save(){
+     savedData.push(confirmEmail);
+     console.log(savedData);
+     }
+     */
+
+</script>
+
+</body>
+</html>

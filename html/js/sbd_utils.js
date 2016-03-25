@@ -85,3 +85,22 @@ var sbd_countDown = function(the_days, the_hours, the_minutes, the_seconds, the_
     mytime = setInterval(sbd_displayTime, 1000);
 
 };
+
+var sbd_ajax = function(action, data, function_success) {
+    var my_object = {};
+    my_object.data = JSON.stringify(data);
+    $.ajax(
+        {
+            url: "http://192.168.1.248:5000/"+ action
+            , data  : my_object
+            , type  : 'post'
+            , dataType : 'jsonp'
+            , success : function(response) {
+                function_success(response);
+            }
+            , error  : function(jqXHR, text_status, error_thrown) {
+                console.log('Error from backend server, please re-try later.');
+            }
+        }
+    );
+};

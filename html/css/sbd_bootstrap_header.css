@@ -1,0 +1,37 @@
+.nav.navbar-nav.navbar-right {
+	margin: 7px 0;
+}
+#emailAddress {
+	width: 270px !important;
+}
+
+#password {
+	width: 270px !important;
+}
+
+#confirmPassword {
+	width: 270px !important;
+}
+
+.sbd_firstName {
+	width: 131px !important;
+}
+
+.sbd_lastName {
+	width: 131px !important;
+}
+
+.sbd_street {
+	width: 270px !important;
+}
+.sbd_city {
+ 	width: 270px !important;
+ }
+
+.sbd_state {
+	width: 120px !important;
+}
+
+.sbd_zip {
+	width: 144px !important;
+}

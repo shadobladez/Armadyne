@@ -1,11 +1,13 @@
 <html>
 <head>
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../css/sbd_bootstrap_header.css">
     <script src="../lib/jquery-2.1.4.js"></script>
 </head>
 <body>
 
     <nav class="navbar navbar-default">
+
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -29,176 +31,33 @@
                         <ul class="sbd_product_list dropdown-menu"></ul>
                     </li>
                     <li><a href="../Products/fullProductsPage.html"> All Products </a></li>
-                    <li class="sbd_services dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Services
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="../Services/services.html" class="sbd_services dropdown"> Services </a></li>
                     <!--
                         <li class="sbd_store"><a href="#"> Store </a></li>
                     -->
                 </ul>
                 <div class="nav navbar-nav navbar-right">
-                    <button type="button" class="btn btn-default" data-toggle="modal" data-target=".sbd_shopping_cart"> Shopping Cart </button>
-                    <button type="button" class="btn btn-default" data-toggle="modal" data-target=".sbd_login"> Login </button>
-                    <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target=".sbd_sign_up"> Sign-Up </button>
+                    <button type="button" class="btn btn-default sbd_shopping_cart"> Shopping Cart </button>
+                    <button type="button" class="btn btn-default sbd_user_name"> Username </button>
+                    <button type="button" class="btn btn-default sbd_log_in"> Login </button>
+                    <button type="button" class="btn btn-default sbd_sign_up"> Sign-Up </button>
                 </div>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
 
-
-        <!-- Modal Body: Shopping Cart -->
-        <div class="modal fade sbd_shopping_cart" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <button class="close" data-dismiss="modal" type="button">
-                            <span aria-hidden="true"> ×</span>
-                            <span class="sr-only">Close</span>
-                        </button>
-                        <h4 class="modal-title"> Shopping Cart </h4>
-                    </div>
-
-                    <!-- Modal Body -->
-                    <div class="modal-body">
-
-                    </div>
-
-                    <!-- Modal Footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-default"> Proceed to Check Out</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal Body: Login -->
-        <div class="modal fade sbd_login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <button class="close" data-dismiss="modal" type="button">
-                            <span aria-hidden="true"> ×</span>
-                            <span class="sr-only">Close</span>
-                        </button>
-                        <h4 class="modal-title"> Log-in </h4>
-                    </div>
-
-                    <!-- Modal Body -->
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="sbd_login_email"> Email: </label>
-                            <input type="text" class="form-control" id="sbd_login_email" placeholder="someone@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="sbd_login_pwd"> Password: </label>
-                            <input type="password" class="form-control" id="sbd_login_pwd" placeholder="Enter password">
-                        </div>
-                    </div>
-
-                    <!-- Modal Body 2 -->
-                    <button type="button" class="btn btn-default" data-toggle="modal" data-target=".sbd_forgot_password"> Forgot Your Password? </button>
-                    <div class="modal fade sbd_forgot_password" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button class="close" data-dismiss="modal" type="button">
-                                        <span aria-hidden="true"> ×</span>
-                                        <span class="sr-only">Close</span>
-                                    </button>
-                                    <h4 class="modal-title"> Forgot Your Password?</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <label for="sbd_login_email"> Email: </label>
-                                        <input type="text" class="form-control" id="sbd_email_password" placeholder="someone@example.com">
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-default"> Send Password Reset </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Modal Footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-default">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal Body: sign-up -->
-        <div class="modal fade sbd_sign_up" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button class="close" data-dismiss="modal" type="button">
-                            <span aria-hidden="true"> ×</span>
-                            <span class="sr-only">Close</span>
-                        </button>
-                        <h4 class="modal-title"> Sign-Up </h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="sbd_email"> Email: </label>
-                            <input type="text" class="form-control" id="sbd_email" placeholder="someone@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="sbd_confirmation_email"> Confirm Email: </label>
-                            <input type="password" class="form-control" id="sbd_confirmation_email" placeholder="someone@example.com">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-default"> Save </button>
-                        <button type="button" class="btn btn-default"> Already Have an Account? </button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </nav>
+</body>
+
+    <div id="sbd_shopping_cart_modal"></div>
+    <div id="sbd_user_name_modal"></div>
+    <div id="sbd_log_in_modal"></div>
+    <div id="sbd_forgot_pass_modal"></div>
+    <div id="sbd_sign_up_modal"></div>
 
     <script src="../js/bootstrap.min.js"></script>
     <script src="../model/Products.js"></script>
-
-    <script>
-
-        $(function(){
-
-        setTimeout (function (){
-        var productList = Products.getData();
-            console.log( "Begin Header Script" );
-            console.log( productList );
-            console.log( "End Header Script" );
-            var previousGroup = "";
-            var products = productList.map(function(item) {
-                var myHtml = "";
-                if (item.product_group !== previousGroup) {
-                    previousGroup = item.product_group;
-                    myHtml += '<li role="separator" class="divider">' + '</li>';
-                }
-                myHtml += '<li>' + '<a href="../Products/' + item.product_name + '.html">' + item.product_name + '</a>' +'</li>';
-                return myHtml;
-            });
-            $('.sbd_product_list').html(products.join(""));
-            }, 0);
-        });
-
-    </script>
+    <script src="../js/header.js"></script>
+    <script src="../js/sbd_utils.js"></script>
 
 </body>
 </html>
